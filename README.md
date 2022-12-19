@@ -26,17 +26,16 @@
 
                             }
 
-*`allowUnusedLabels` - `undefined` (по умолчанию) предоставляет предложения в качестве предупреждений редакторам
+* `allowUnusedLabels` - `undefined` (по умолчанию) предоставляет предложения в качестве предупреждений редакторам
                          `true` неиспользуемые метки игнорируются
                          `false` вызывает ошибки компилятора о неиспользуемых метках
-                         
-                         function verifyAge(age: number) {
-                            // Forgot 'return' statement
-                            if (age > 18) {
-                              verified: true;
-                          >Unused label.
-                            }
-                          }  
+                           function verifyAge(age: number) {
+                           // Forgot 'return' statement
+                           if (age > 18) {
+                             verified: true;
+                         >Unused label.
+                           }
+                         }  
 
 *`alwaysStrict` - Гарантирует, что ваши файлы анализируются в строгом режиме ECMAScript и выдают “use strict” для каждого исходного файла.
 
