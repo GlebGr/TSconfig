@@ -26,10 +26,11 @@
 
                             }
 
-* `allowUnusedLabels` - `undefined` (по умолчанию) предоставляет предложения в качестве предупреждений редакторам
-                         `true` неиспользуемые метки игнорируются
-                         `false` вызывает ошибки компилятора о неиспользуемых метках
-                           function verifyAge(age: number) {
+* `allowUnusedLabels`  * `undefined` (по умолчанию) предоставляет предложения в качестве предупреждений редакторам
+                       * `true` неиспользуемые метки игнорируются
+                       * `false` вызывает ошибки компилятора о неиспользуемых метках
+                         
+                        function verifyAge(age: number) {
                            // Forgot 'return' statement
                            if (age > 18) {
                              verified: true;
