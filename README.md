@@ -22,7 +22,7 @@
                                 return false;
                             }
                             return true;
-                                ![#f03c15] Unreachable code detected.
+                                 ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Unreachable code detected.
 
                             }
 
