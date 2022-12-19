@@ -22,7 +22,7 @@
                                 return false;
                             }
                             return true;
-                                > Unreachable code detected.
+                                ![#f03c15] Unreachable code detected.
 
                             }
 
