@@ -1,4 +1,4 @@
-*`allowUnreachableCode` - `undefined` (по умолчанию) предоставляет предложения в качестве предупреждений редакторам
+* `allowUnreachableCode` - `undefined` (по умолчанию) предоставляет предложения в качестве предупреждений редакторам
                          `true` недоступный код игнорируется
                          `false` вызывает ошибки компилятора о недоступном коде 
 
@@ -23,7 +23,7 @@
                               | Unreachable code detected.
                           }
 
-* `allowUnusedLabels`  * `undefined` (по умолчанию) предоставляет предложения в качестве предупреждений редакторам
+* `allowUnusedLabels` -  `undefined` (по умолчанию) предоставляет предложения в качестве предупреждений редакторам
  `true` неиспользуемые метки игнорируются
  `false` вызывает ошибки компилятора о неиспользуемых метках
 
@@ -35,9 +35,9 @@
                            }
                          }  
 
-*`alwaysStrict` - Гарантирует, что ваши файлы анализируются в строгом режиме ECMAScript и выдают “use strict” для каждого исходного файла.
+* `alwaysStrict` - Гарантирует, что ваши файлы анализируются в строгом режиме ECMAScript и выдают “use strict” для каждого исходного файла.
 
-*`exactOptionalPropertyTypes` - При включенном exactOptionalPropertyTypes TypeScript применяет более строгие правила в отношении того, как он обрабатывает свойства `type` или `interfaces`
+* `exactOptionalPropertyTypes` - При включенном exactOptionalPropertyTypes TypeScript применяет более строгие правила в отношении того, как он обрабатывает свойства `type` или `interfaces`
 которые имеют префикс `?`.
 Например, этот интерфейс объявляет, что существует свойство, которое может быть одной из двух строк: ‘dark’ или ‘light’
 
@@ -61,7 +61,7 @@
                                  | 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the 
                                  | type of the target.
 
-*`noFallthroughCasesInSwitch` - Гарантирует, что любой непустой регистр внутри оператора `switch` включает либо `break` или `return`. Это означает, что вы случайно не отправите ошибку в случаев
+* `noFallthroughCasesInSwitch` - Гарантирует, что любой непустой регистр внутри оператора `switch` включает либо `break` или `return`. Это означает, что вы случайно не отправите ошибку в случаев
 сбоя.  
 
                                 const a: number = 6;
@@ -75,7 +75,7 @@
                                     break;
                                 }                               
 
-*`noImplicitAny` - В некоторых случаях, когда аннотации типов отсутствуют, TypeScript возвращается к типу `any`для переменной, когда он не может определить тип.
+* `noImplicitAny` - В некоторых случаях, когда аннотации типов отсутствуют, TypeScript возвращается к типу `any`для переменной, когда он не может определить тип.
 Однако включение TypeScript будет выдавать ошибку всякий раз, когда она будет выведена `any`:
 
                    function fn(s) {
@@ -83,7 +83,7 @@
                       console.log(s.subtr(3));
                     }
 
-*`noImplicitOverride` - При работе с классами, использующими наследование, подкласс может “рассинхронизироваться” с функциями, которые он перегружает, когда они переименовываются в базовом классе.
+* `noImplicitOverride` - При работе с классами, использующими наследование, подкласс может “рассинхронизироваться” с функциями, которые он перегружает, когда они переименовываются в базовом классе.
 
                       class Album {
                          download() {
@@ -135,7 +135,7 @@
                          | This member must have an 'override' modifier because it overrides a member in the base class 'Album'.
                          }
 
-*`noImplicitReturns` - При включении TypeScript проверяет все пути кода в функции, чтобы убедиться, что они возвращают значение.
+* `noImplicitReturns` - При включении TypeScript проверяет все пути кода в функции, чтобы убедиться, что они возвращают значение.
 
                         function lookupHeadphonesManufacturer(color: "blue" | "black"): string {
 
@@ -148,7 +148,7 @@
                           }
                         }
 
-*`noImplicitThis` - Выдает ошибку в выражениях ‘this’ с подразумеваемым типом ‘any’.
+* `noImplicitThis` - Выдает ошибку в выражениях ‘this’ с подразумеваемым типом ‘any’.
 
                     class Rectangle {
                       width: number;
@@ -168,7 +168,7 @@
                       }
                     }
 
-*`noPropertyAccessFromIndexSignature` - Этот параметр обеспечивает согласованность между доступом к полю с помощью синтаксиса “точка” (`obj.key`) и “индексированный” (`obj["key"]`) и 
+* `noPropertyAccessFromIndexSignature` - Этот параметр обеспечивает согласованность между доступом к полю с помощью синтаксиса “точка” (`obj.key`) и “индексированный” (`obj["key"]`) и 
 способом объявления свойства в типе. Без этого флага TypeScript позволит вам использовать синтаксис dot для доступа к полям, которые не определены:
 
                                         interface GameSettings {
@@ -205,7 +205,7 @@
                                          settings.username;
                                          | Property 'username' comes from an index signature, so it must be accessed with ['username'].
 
-*`noUncheckedIndexedAccess` - В TypeScript есть способ описания объектов, которые имеют неизвестные ключи, но известные значения для объекта, с помощью индексных подписей.
+* `noUncheckedIndexedAccess` - В TypeScript есть способ описания объектов, которые имеют неизвестные ключи, но известные значения для объекта, с помощью индексных подписей.
 Включение `noUncheckedIndexedAccess` добавит `undefined` к любому не объявленному полю в типе.
 
                               declare const env: EnvironmentVars;
@@ -221,7 +221,7 @@
                                 const nodeEnv = env.NODE_ENV;
                                 // const nodeEnv: string | undefined
 
-*`noUnusedLocals` - Сообщать об ошибках в неиспользуемых локальных переменных.
+* `noUnusedLocals` - Сообщать об ошибках в неиспользуемых локальных переменных.
 
                    const createKeyboard = (modelID: number) => {
                       const defaultModelID = 23;
@@ -229,7 +229,7 @@
                       return { type: "keyboard", modelID };
                     };   
 
-*`noUnusedParameters` - Сообщать об ошибках по неиспользуемым параметрам в функциях.
+* `noUnusedParameters` - Сообщать об ошибках по неиспользуемым параметрам в функциях.
 
                         const createDefaultKeyboard = (modelID: number) => {
                         | 'modelID' is declared but its value is never read.
@@ -237,11 +237,11 @@
                           return { type: "keyboard", modelID: defaultModelID };
                         };
 
-*`strict` - Флаг обеспечивает широкий диапазон действий по проверке типов, что приводит к более надежным гарантиям корректности программы. 
+* `strict` - Флаг обеспечивает широкий диапазон действий по проверке типов, что приводит к более надежным гарантиям корректности программы. 
 Включение этого параметра равносильно включению всех параметров семейства строгих режимов, которые описаны ниже. 
 Затем вы можете отключить отдельные проверки семейства строгих режимов по мере необходимости.
 
-*`strictBindCallApply` - При установке TypeScript проверяет, что встроенные методы функций `call`, `bind`, и `apply` вызываются с правильным аргументом для базовой функции:
+* `strictBindCallApply` - При установке TypeScript проверяет, что встроенные методы функций `call`, `bind`, и `apply` вызываются с правильным аргументом для базовой функции:
 
                          // With strictBindCallApply on
                          function fn(x: string) {
@@ -253,7 +253,7 @@
                          const n2 = fn.call(undefined, false);
                          | Argument of type 'boolean' is not assignable to parameter of type 'string'.
 
-*`strictFunctionTypes` - Когда этот флаг включен, параметры функций проверяются более корректно.
+* `strictFunctionTypes` - Когда этот флаг включен, параметры функций проверяются более корректно.
 
                         function fn(x: string) {
                           console.log("Hello, " + x.toLowerCase());
@@ -268,7 +268,7 @@
                         |     Type 'string | number' is not assignable to type 'string'.
                         |       Type 'number' is not assignable to type 'string'.
 
-*`strictNullChecks` - Когда `strictNullChecks` `false`, `null` и `undefined` фактически игнорируются языком. Это может привести к непредвиденным ошибкам во время выполнения.
+* `strictNullChecks` - Когда `strictNullChecks` `false`, `null` и `undefined` фактически игнорируются языком. Это может привести к непредвиденным ошибкам во время выполнения.
 Когда `strictNullChecks` `true`, `null` и `undefined` имеют свои собственные различные типы, и вы получите ошибку типа, если попытаетесь использовать их там, где ожидается конкретное значение.
 
                       declare const loggedInUsername: string;
@@ -294,7 +294,7 @@
                          console.log(loggedInUser.age);
                          | Object is possibly 'undefined'.
 
-*`strictPropertyInitialization` - Если установлено значение true, TypeScript выдаст сообщение об ошибке, если свойство класса было объявлено, но не задано в конструкторе.
+* `strictPropertyInitialization` - Если установлено значение true, TypeScript выдаст сообщение об ошибке, если свойство класса было объявлено, но не задано в конструкторе.
 
                                   class UserAccount {
                                     name: string;
@@ -319,7 +319,7 @@
                                   `this.email` не задан и выдает ошибку.
                                   `this.address` объявляется как потенциально `undefined`, что означает, что его не нужно устанавливать.
 
-*`useUnknownInCatchVariables` - В TypeScript 4.0 была добавлена поддержка, позволяющая изменять тип переменной в предложении `catch` с `any` на `unknown`.
+* `useUnknownInCatchVariables` - В TypeScript 4.0 была добавлена поддержка, позволяющая изменять тип переменной в предложении `catch` с `any` на `unknown`.
 
                                 try {
                                   // ...
@@ -339,7 +339,7 @@
 
 # Interop Constraint
 
-*`allowSyntheticDefaultImports` - Если установлено значение true, allowSyntheticDefaultImportsпозволяет записывать импорт, например:
+* `allowSyntheticDefaultImports` - Если установлено значение true, allowSyntheticDefaultImportsпозволяет записывать импорт, например:
 
                                   import React from "react";
                                   
@@ -448,7 +448,7 @@
                        fs.readFileSync("file.txt", "utf8");
                        lodash_1.default.chunk(["a", "b", "c", "d"], 2);
 
-*`isolatedModules` - Хотя вы можете использовать TypeScript для создания кода JavaScript из кода TypeScript, 
+* `isolatedModules` - Хотя вы можете использовать TypeScript для создания кода JavaScript из кода TypeScript, 
 для этого также часто используются другие транспайлеры, такие как Babel. Однако другие транспайлеры одновременно 
 работают только с одним файлом, что означает, что они не могут применять преобразования кода, которые зависят от 
 понимания полной системы типов. Это ограничение также распространяется на `ts.transpileModule` API TypeScript, который 
